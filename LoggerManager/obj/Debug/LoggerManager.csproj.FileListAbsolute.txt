@@ -1,0 +1,6 @@
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\LoggerManager\bin\Debug\LoggerManager.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\LoggerManager\bin\Debug\LoggerManager.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\LoggerManager\obj\Debug\LoggerManager.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\LoggerManager\obj\Debug\LoggerManager.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\LoggerManager\obj\Debug\LoggerManager.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\LoggerManager\obj\Debug\LoggerManager.pdb

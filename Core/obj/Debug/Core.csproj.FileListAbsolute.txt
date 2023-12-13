@@ -1,0 +1,9 @@
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\bin\Debug\Core.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\bin\Debug\Core.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\obj\Debug\Core.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\obj\Debug\Core.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\bin\Debug\LoggerManager.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\bin\Debug\LoggerManager.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\Core\obj\Debug\Core.csproj.CopyComplete

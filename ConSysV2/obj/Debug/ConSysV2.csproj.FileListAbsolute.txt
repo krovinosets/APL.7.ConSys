@@ -1,0 +1,13 @@
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\ConSysV2.exe
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\ConSysV2.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\obj\Debug\ConSysV2.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\obj\Debug\ConSysV2.csproj.SuggestedBindingRedirects.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\obj\Debug\ConSysV2.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\obj\Debug\ConSysV2.exe
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\obj\Debug\ConSysV2.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\Core.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\Core.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\obj\Debug\ConSysV2.csproj.CopyComplete
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\LoggerManager.dll
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\LoggerManager.pdb
+C:\Users\andre\OneDrive\env\RiderProjects\ConSysV2\ConSysV2\bin\Debug\ConSysV2.exe.config
