@@ -62,6 +62,9 @@ namespace ConSysV2
                 MetricsHolder.Output("Main", model.Id);
             }
             
+            // Один поток
+            OneThreadTask();
+            
             foreach (var model in models)
             {
                 DateTime finished = model.FinishedTime;
@@ -75,6 +78,7 @@ namespace ConSysV2
                 Logger.Info("Main", $"Утечка времени: {finished - started - sum}");
             }
             
+            Logger.Info("Main", $"---------------------------------------------------------------------");
             Logger.Info("Main", $"Max memory usage: {Process.GetCurrentProcess().PeakWorkingSet64} Bytes, {Process.GetCurrentProcess().PeakWorkingSet64 / 1024 / 1024} MBytes");
             Logger.Info("Main", $"Memory usage at end: {GC.GetTotalMemory(true)} Bytes, {GC.GetTotalMemory(true) / 1024} KBytes");
             Logger.Info("Main", $"Завершение программы");
@@ -82,21 +86,23 @@ namespace ConSysV2
         
         public static void OneThreadTask()
         {
-            var dataList = new List<Data>()
+            List<Data> dataList = new List<Data>();
+            for (int amount = 0; amount < 20; amount++)
             {
-                new Data(PrimaryKey.GetID(), 1024),
-                new Data(PrimaryKey.GetID(), 1024), 
-                new Data(PrimaryKey.GetID(), 1024)
-            };
+                dataList.Add(new Data(PrimaryKey.GetID(),1024));
+            }
             var started = DateTime.Now;
             OneThread oneThread = new OneThread(dataList);
             oneThread.Start();
             var finished = DateTime.Now;
-            MetricsHolder.Output("Main", -1);
-            var sum = MetricsHolder.CalculateCommonSum(-1);
-            Logger.Info("Main/main thread", $"Время потраченное на решение: {sum}");
-            Logger.Info("Main/main thread", $"реальное время работы: {finished - started}");
-            Logger.Info("Main/main thread", $"Утечка времени: {finished - started - sum}");
+            MetricsHolder.Output("Main", 99);
+            var sum = MetricsHolder.CalculateCommonSum(99);
+            Logger.Info("Main", $"---------------------------------------------------------------------");
+            Logger.Info("Main", $"Модель OneThread ID: 99");
+            Logger.Info("Main", $"Настройки: Collections:1, Analysis:1, Integrations:1");
+            Logger.Info("Main", $"Время потраченное на решение: {sum}");
+            Logger.Info("Main", $"реальное время работы: {finished - started}");
+            Logger.Info("Main", $"Утечка времени: {finished - started - sum}");
         }
     }
 }

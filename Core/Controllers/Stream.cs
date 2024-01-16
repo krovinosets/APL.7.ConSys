@@ -57,7 +57,7 @@ namespace Core.Controllers
                 if (!lockedBySomeone)
                 {
                     Monitor.Exit(stage.GetLink());
-                    if (DateTime.Now > stage.GetLastActivity().AddSeconds(30))
+                    if (DateTime.Now > stage.GetLastActivity().AddSeconds(10))
                     {
                         Logger.Info($"Stream #{Id}", $"Удаляем поток из-за неактивности в течении 30 секунд!");
                         toDelete.Add(stage);
@@ -78,6 +78,7 @@ namespace Core.Controllers
                 {
                     Finished = true;
                     FinishedTime = DateTime.Now;
+                    _timeoutHopperEvent.Stop();
                     Monitor.Pulse(Linker);
                 }
             }
@@ -97,7 +98,7 @@ namespace Core.Controllers
         private void InjectHopperTimer()
         {
             _timeoutHopperEvent = new System.Timers.Timer();
-            _timeoutHopperEvent.Interval = 5000;
+            _timeoutHopperEvent.Interval = 100;
             _timeoutHopperEvent.Elapsed += OnQueueEvent;
             _timeoutHopperEvent.Enabled = true;
             Logger.Info($"Stream #{Id}", $"Обработчик Hopper создан, текущяя конфигурация [interval:{_timeoutHopperEvent.Interval}]");
@@ -132,6 +133,8 @@ namespace Core.Controllers
         
         private void OnQueueEvent(Object source, System.Timers.ElapsedEventArgs e)
         {
+            if (UStages.Threads.Count == 0)
+                return;
             CheckStatus();
             foreach (Tuple<List<IStage>, UQueue> stage in UStages)
             {
